@@ -1,0 +1,364 @@
+*{
+    margin: auto;
+    padding: auto;
+}
+
+#main{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    color: red;
+    user-select: none;
+    display: flex;
+}
+
+#mainboard{
+    height: 100vmin;
+    width: 100vmin;
+    border: 1vmin solid goldenrod;
+    border-style:outset;
+    position: relative;
+}
+
+header{
+    height: 6vmin;
+    width: 100vmin;
+    background-color: red;
+    color: black;
+    font-size: 5vmin;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight:900;
+    padding-top: 0px;
+}
+
+#coder{
+    font-size: 4vmin;
+    font-style:italic;
+    font-family: cursive;
+    color:gold;
+    position: absolute;
+    left: 3vmin;
+}
+
+.spot{
+    height: 15vmin;
+    width: 15vmin;
+    font-size: 4vmin;
+    border-radius: 50%;
+    position: absolute;
+    font-family: sans-serif;
+    background-color: black;
+    border-top: 1vmin solid red;
+}
+
+.red-spot{
+    background-color: red;
+    border-bottom: 1vmin solid black;
+}
+
+.black-spot{
+    background-color: black;
+    border-top: 1vmin solid red;
+}
+
+#user-spot{
+    top: 23vmin;
+    left: 5vmin;
+}
+
+#user-spot-label{
+    margin-top: 4vmin;
+    margin-left: 3vmin;
+    color: white;
+}
+
+#comp-spot{
+top: 23vmin;
+left: 80vmin;
+}
+
+#comp-spot-label{
+    margin-top: 4vmin;
+    margin-left: 3vmin;
+    color: white;
+}
+
+#scoreboard{
+    background-color:inherit;
+    color: black;
+    border: 0.5vmin solid red;
+    border-top-color: black;
+    border-bottom-color: black;
+    width: 59vmin;
+    height: 20vmin;
+    text-align: center;
+    font-size: 11vmin;
+    position: relative;
+    padding-top: 2vmin;
+    font-weight: 800;
+    
+}
+
+#colon, #user-score, #comp-score{
+    color: white;
+}
+#colon{
+    color: red;
+}
+
+.badge{
+    background-color: black;
+    color: red;
+    width: fit-content;
+    border: 0.5vmin solid red;
+    font-family:sans-serif;
+    font-weight: bold;
+    font-size: 3.5vmin;
+    padding: 0.5vmin 1vmin;
+}
+
+#user-label{
+    position: absolute;
+    top: 6vmin;
+    left: -6vmin;
+    user-select: none;
+}
+#user-label:hover{
+    cursor:cell;
+}
+
+#comp-label{
+    position: absolute;
+    top: 6vmin;
+    right: -11vmin;
+}
+
+#max-board{
+    width: fit-content;
+    height: fit-content;
+    padding:2vmin 1vmin 2vmin 1vmin;
+    background: black;
+    color: white;
+    font-size: 4vmin;
+    border: 1vmin solid white;
+    border-radius: 50%;
+    border-left: none;
+    border-right: none;
+    border-top-color: red;
+    border-bottom-color: black;
+   
+    cursor: cell;
+    position: absolute;
+    top: 17vmin;
+    left: 20vmin;
+
+    
+}
+
+#gameboard{
+    background: red;
+    height: 69vmin;
+    width: 100vmin;
+}
+
+#game-info{
+    color: black;
+    width: 60vmin;
+    height: 6vmin;
+    padding: 5vmin 1vmin;
+    text-align: center;
+    font-size: 5vmin;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    border-bottom: 1vmin solid black;
+    border-radius: 50%;
+    border-left: 1vmin solid black;
+    border-right: 1vmin solid black;
+}
+
+#option-red-design{
+    background-color: black;
+    height: 47vmin;
+    width: 45vmin;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-right-style: dotted;
+    border-width: 2vmin;
+    position: absolute;
+    top: 53vmin;
+
+}
+
+#option-red-background{
+    width: 25vmin;
+    height: 25vmin;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 4vmin;
+    margin-left: 18vmin;
+    display: flex;
+}
+
+.option-red{
+    width: 21vmin;
+    height: 21vmin;
+    text-align: center;
+    background: red;
+    border-radius: 50%;
+    color: black;
+    font-weight: 600;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.option-red-span{
+    width: 21vmin;
+    height: 21vmin;
+    text-align: center;
+    background: red;
+    border-radius: 50%;
+    color: black;
+    font-weight: 600;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.option-red-span:hover, .option-red:hover{
+    width: 19vmin;
+    height: 24vmin;
+    transition: 200ms;
+}
+.option-red-span:active{
+    display: none;
+}
+.option-red:active:after{
+    content: 'CLICK'  ;
+    color: white;
+}
+
+
+#option-black-design{
+    background-color:black;
+    height: 47vmin;
+    width: 45vmin;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-left-style: dotted;
+    border-left-width: 2vmin;
+    border-left-color: red;
+    position: absolute;
+    top: 53vmin;
+    right: 0vmin;
+
+}
+
+#option-black-background{
+    width: 25vmin;
+    height: 25vmin;
+    background-color: white;
+    border-radius: 50%;
+    margin-top: 4vmin;
+    margin-left: 2vmin;
+    display: flex;
+    
+}
+
+
+.option-black{
+    width: 21vmin;
+    height: 21vmin;
+    text-align: center;
+    background: black;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option-black-span{
+    width: 21vmin;
+    height: 21vmin;
+    text-align: center;
+    background: black;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 3vmin;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.option-black-span:hover, .option-black:hover{
+    width: 19vmin;
+    height: 24vmin;
+    transition: 200ms;
+}
+.option-black-span:active{
+    display: none;
+}
+.option-black:active:after{
+    content: 'CLICK';
+    color: white;
+}
+
+#reset{
+    width: fit-content;
+    height: fit-content;
+    background-color: black;
+    color: red;
+    padding: 1vmin 2vmin;
+    font-size: 4vmin;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    border: 1vmin solid gold;
+    border-style: outset;
+    border-radius: 4vmin;
+    position: absolute;
+    top: 88vmin;
+    left: 33vmin;
+}
+#reset:hover{
+    background: black;
+    color: white;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+#reset:active{
+    background: red;
+    color: white;
+    transition: 100ms;
+}
+
+/*set classes for win and loose*/
+
+.win{
+    background-color: rgb(0, 255, 0);
+    box-shadow: 0 0 5px rgb(0, 255, 0),
+    0 0 10px rgb(0, 255, 0),
+    0 0 20px rgb(0, 255, 0),
+    0 0 30px rgb(0, 255, 0),
+    0 0 40px rgb(0, 255, 0);
+}
+
+.loose{
+    background-color: red(0, 255, 0);
+    box-shadow: 0 0 5px rgb(255, 0, 0),
+    0 0 10px rgb(255, 0, 0),
+    0 0 20px rgb(255, 0, 0),
+    0 0 30px rgb(255, 0, 0),
+    0 0 40px rgb(255, 0, 0);
+}

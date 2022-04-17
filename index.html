@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" type="text/css" media="all" />
+    <title>RPS GAME</title>
+</head>
+
+<body>
+	<div id="main">
+
+        <div id="mainboard">
+
+            <div id="user-spot" class="spot"><div id="user-spot-label">Start</div></div>
+
+            <div id="comp-spot" class="spot"><div id="comp-spot-label">Start</div></div>
+            <header>
+                <p id="title">RED or BLACK<span id="coder">Savvycode</span></p>
+            </header>
+    
+            <div id="scoreboard">
+                <div id="user-label" class="badge">User</div>
+                <div id="comp-label" class="badge">Computer</div>
+                <span id="user-score">0</span><span id="colon">:</span><span id="comp-score">0</span>
+                <div id="max-board">
+                    <span id="max-label">Max = </span><span id="max-value">10</span>
+                </div>
+            </div>
+            <div>
+                <div id="gameboard">
+                    <p id="game-info">Guess Red or Black</p>
+                    <div class="options">
+                        <div id="option-red-design">
+                            <div id="option-red-background">
+                                <div class="option-red"  id="r"><span class="option-red-span">RED</span></div>
+                            </div>
+                        </div>
+                        
+                        <div id="option-black-design">
+                            <div id="option-black-background">
+                                <div class="option-black" id="b"><span  class="option-black-span">BLACK</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                <button id='reset'>Reset Scores</button>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+
+
+	<script src="script.js" type="text/javascript" charset="utf-8"></script>
+</body>
+. 
+</html>
