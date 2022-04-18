@@ -52,12 +52,13 @@ userLabel.addEventListener('dblclick', function(){changeName('user-label')});
 function changeName(id){
     var change = document.getElementById(id);
     var originalName = change.innerHTML;
+    var originalPosition = userLabel.style.left;
 
-    var newName = prompt('Enter your name Here.', originalName);
+    var newName = prompt('Enter your name Here. Not more than 10 Characters', originalName);
     while (true){
         
         if(newName.length > 10 && newName[0] === " "){
-            alert("Name is too long! \nIt shouldn't exceed 10 characters \nor begin with an empty character.")
+            alert("Name is too long! \nIt shouldn't exceed 10 characters \n or begin with an empty character.")
         var newName = prompt('Enter your name Here.', originalName);
         } else if (newName.length > 10){
             alert("Name is too long! \nIt shouldn't exceed 10 characters.")
@@ -65,6 +66,9 @@ function changeName(id){
         }else if(newName[0] === " "){
             alert("Name shouldn't begin with an empty character.")
             var newName = prompt('Enter your name Here.', originalName);
+        }else if(newName.length == 0){
+            alert("Name shouldn't be empty.")
+            break;    
         } else {
             break;
         }
@@ -72,14 +76,15 @@ function changeName(id){
     }
 
     // CONVERT NAME TO SENTENCE CASE
-    newName = newName[0] + newName.slice(1, newName.length).toLocaleLowerCase();
+    newName = newName[0].toLocaleUpperCase() + newName.slice(1, newName.length).toLocaleLowerCase();
   
     // ADJUST LABEL POSITION BASED ON NAME LENGTH;
     var adjust = '-' + newName.length -2 + 'vmin';
     userLabel.style.left = adjust;
 
-    if (newName[0] === " " || newName.length === 0){
+    if (newName === "undefined"){
         change.innerHTML = originalName;
+        userLabel.style.left = originalPosition;
     } else {
         change.innerHTML = newName;
     }
@@ -202,7 +207,14 @@ function loose(user, comp){
 
 function maxScoreReached(){
     // MODIFY CONTENTS
-    gameInfo.innerHTML = "max score reahed";
+    var winner;
+    if (userScore > compScore) {
+        winner = userLabel.innerHTML
+    } else{
+        winner = "Computer"
+    }
+
+    gameInfo.innerHTML = `max score reached \n ${winner} WON`;
     userSpotLabel.innerHTML = "Restart";
     userSpotLabel.style.marginLeft = "1vmin";
     compSpotLabel.innerHTML = "Restart";

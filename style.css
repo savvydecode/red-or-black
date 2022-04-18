@@ -1,6 +1,7 @@
 *{
     margin: auto;
     padding: auto;
+    user-select: none;
 }
 
 #main{
@@ -125,7 +126,7 @@ left: 80vmin;
     user-select: none;
 }
 #user-label:hover{
-    cursor:cell;
+    cursor: cell;
 }
 
 #comp-label{
